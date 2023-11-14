@@ -16,6 +16,7 @@ public class test {
 		Logger.warn("H");
 		Logger.error("H");
 		Logger.fatal("H");	
-
+		
+		Logger.debug("");
 	}
 }
