@@ -1,0 +1,6 @@
+19:15:11.863 [main] TRACE org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test main - H
+19:15:11.866 [main] DEBUG org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test main - H
+19:15:11.867 [main] INFO  org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test main - H
+19:15:11.868 [main] WARN  org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test main - H
+19:15:11.869 [main] ERROR org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test main - H
+19:15:11.869 [main] FATAL org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test main - H
