@@ -1,7 +1,12 @@
-19:34:24.632 [main] TRACE org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test main - H
-19:34:24.635 [main] DEBUG org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test main - H
-19:34:24.635 [main] INFO  org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test main - H
-19:34:24.635 [main] WARN  org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test main - H
-19:34:24.635 [main] ERROR org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test main - H
-19:34:24.636 [main] FATAL org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test main - H
-19:34:24.637 [main] DEBUG org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test main - 
+20:38:17.158 [main] DEBUG org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test leerFicheroYCrearLista - Alumno [dni=1111A, nombre=Nombre1, apellidos=Apellidos1]
+20:38:17.161 [main] DEBUG org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test leerFicheroYCrearLista - Alumno [dni=2222B, nombre=Nombre2, apellidos=Apellidos2]
+20:38:17.161 [main] DEBUG org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test leerFicheroYCrearLista - Alumno [dni=3333C, nombre=Nombre3, apellidos=Apellidos3]
+20:38:17.161 [main] DEBUG org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test leerFicheroYCrearLista - Alumno [dni=4444D, nombre=Nombre4, apellidos=Apellidos4]
+20:38:17.164 [main] DEBUG org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test leerFicheroYCrearLista - Alumno [dni=5555E, nombre=Nombre5, apellidos=Apellidos5]
+20:38:17.164 [main] DEBUG org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test leerFicheroYCrearLista - Alumno [dni=6666F, nombre=Nombre6, apellidos=Apellidos6]
+20:38:17.165 [main] DEBUG org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test leerFicheroYCrearLista - Alumno [dni=7777G, nombre=Nombre7, apellidos=Apellidos7]
+20:38:17.165 [main] DEBUG org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test leerFicheroYCrearLista - Alumno [dni=8888H, nombre=Nombre8, apellidos=Apellidos8]
+20:38:17.165 [main] DEBUG org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test leerFicheroYCrearLista - Alumno [dni=9999I, nombre=Nombre9, apellidos=Apellidos9]
+20:38:17.166 [main] DEBUG org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test leerFicheroYCrearLista - Alumno [dni=1010J, nombre=Nombre10, apellidos=Apellidos10]
+20:38:17.166 [main] DEBUG org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test leerFicheroYCrearLista - Alumno [dni=1111K, nombre=Nombre11, apellidos=Apellidos11]
+20:38:17.167 [main] DEBUG org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test leerFicheroYCrearLista - La lista contiene 11 Alumnos
