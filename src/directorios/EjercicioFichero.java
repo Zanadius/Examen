@@ -15,7 +15,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.plugins.util.ResolverUtil.Test;
 
+import exceptions.NoResultsException;
 import objetos.Alumno;
+import objetos.Biblioteca;
+import objetos.Direcciones;
 import utils.UtilsDataBase;
 
 public class EjercicioFichero {
@@ -36,6 +39,13 @@ public class EjercicioFichero {
 		try {
 			main.leerFicheroYCrearLista("C:\\workspace\\test\\Recursos\\alumnos.txt");
 		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		try {
+			main.insertarDireccionesDeArchivo("C:\\workspace\\test\\Recursos\\bibliotecas.txt");
+		} catch (IOException | SQLException | NoResultsException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -130,35 +140,46 @@ public class EjercicioFichero {
 		return listaAlumnos;
 	}
 
-	public void ingresarAlumnosDDBB(List <Alumno> lista)throws SQLException, NoResultsException {
-		
+	public void insertarDireccionesDeArchivo(String ruta) throws IOException, SQLException, NoResultsException {
+
+		String sb = new String();
+		File archivo = new File(ruta);
+		FileReader fileReader = new FileReader(archivo);
+		BufferedReader reader = new BufferedReader(fileReader);
+		List<Biblioteca> listaAlumnos = new ArrayList<Biblioteca>();
+
+		String linea;
+		while ((linea = reader.readLine()) != null) {
+			sb = linea;
+			String[] datos = sb.toString().split("\\|");
+			Logger.debug("Ingresando biblioteca: " + sb + " a la base de datos");
 			
-			Alumno alumno = new Alumno ("a","b","c",0,true);
-			Logger.debug("Ingresando alumno: " + alumno + " a la base de datos");
-			String query = "INSERT "
-					+ "INTO TB_ALUMNOS ((dni,nombre,apellidos,nota,vip) "
+			
+			String query = "INSERT " + "INTO TB_DIRECCION ((tipo_direccion,direccion,ciudad,provincia,cod_postal) "
 					+ "VALUES (?,?,?,?,?)";
-			
 			Logger.debug(query);
-			
+
 			PreparedStatement ps = this.getConexion().prepareStatement(query);
-			ps.setString(1, titulo);
-			ps.setString(2, autor);
-			ps.setString(3, isbn);
-			ps.setLong(4, idBiblioteca);
+			ps.setString(1, datos[0]);
+			ps.setString(2, datos[1]);
+			ps.setString(3, datos[2]);
+			ps.setString(4, datos[3]);
+			ps.setInt(5, Integer.parseInt(datos[4]));
+			
+			Direcciones newDir = new Direcciones (datos[0],datos[1],datos[2],datos[3],Integer.parseInt(datos[4]));
 			
 			int insertados = ps.executeUpdate();
-			
-			if (insertados==0) {
+
+			if (insertados == 0) {
 				Logger.warn("No se ha realizado el insert de libro correctamente");
 				throw new NoResultsException("No se ha insertado ningún libro");
-				//throw new NullPointerException("Lo he creado yo");
-			}else {
+				// throw new NullPointerException("Lo he creado yo");
+			} else {
 				Logger.info("Insert de libro realizado correctamente");
 			}
-			
-		
+		}
 	}
+
 
 	public EjercicioFichero() {
 		super();
