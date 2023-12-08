@@ -1,4 +1,4 @@
-package examen.entities;
+ package examen.entities;
 
 public class Objeto {
 
