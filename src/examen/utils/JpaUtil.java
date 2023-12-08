@@ -1,4 +1,4 @@
-package he.hibernate.util;
+package examen.utils;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

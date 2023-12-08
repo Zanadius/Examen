@@ -1,4 +1,4 @@
-package exceptions;
+package examen.exceptions;
 
 public class NoResultsException extends Exception {
 
