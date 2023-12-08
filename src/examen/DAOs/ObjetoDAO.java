@@ -28,7 +28,6 @@ public class ObjetoDAO {
 		logger.warn("Texto");
 		logger.error("Texto");
 		logger.fatal("Texto");
-
 	}
 	
 	public void insertarObjeto (Objeto objeto) {
@@ -62,7 +61,7 @@ public class ObjetoDAO {
 		return em.createQuery("from Objeto", Objeto.class).getResultList();
 	}
 	
-	public List<Objeto> objetoNombre (String name){
+	public List<Objeto> busquedaNombre (String name){
 		List<Objeto> usuarios;
 		
 		Query query = em.createQuery(
@@ -80,7 +79,7 @@ public class ObjetoDAO {
 	public void borrarUsuarioPorNombre (String nombre) {
 		 em.getTransaction().begin();
 		 try {
-			List<Objeto> objetos = objetoNombre(nombre);
+			List<Objeto> objetos = busquedaNombre(nombre);
            
            for (Objeto objeto : objetos) {
            	em.remove(objeto);
@@ -93,12 +92,12 @@ public class ObjetoDAO {
 	     
 	}
 	
-	public void modificarUsuarioPorDni (String dni, Objeto objeto) {
+	public void modificarUsuarioPorNombre (String nombre, Objeto objeto) {
 		
 		TypedQuery<Objeto> query = em.createQuery(
-				"from UserEntity where dni=?1",
+				"from Objeto where nombre=?1",
 				Objeto.class);
-		query.setParameter(1, dni);
+		query.setParameter(1, nombre);
 		
 		try {
 			Objeto ob = query.getSingleResult();
@@ -110,7 +109,7 @@ public class ObjetoDAO {
 			
 			em.getTransaction().commit();
 		}catch (NoResultException nre) {
-			System.out.println("Dni "+dni+ " no encontrado");
+			System.out.println("Nombre "+nombre+ " no encontrado");
 		}catch (Exception e) {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
