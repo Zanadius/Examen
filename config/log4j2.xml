@@ -33,7 +33,7 @@
 			<AppenderRef ref="rollingFile" />
 		</Logger>
 		<!-- General Logger -->
-		<Root level="trace" additivity="false">
+		<Root level="trace">
 			>
 			<AppenderRef ref="LogToConsole" />
 			<AppenderRef ref="rollingFile" />

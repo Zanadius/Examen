@@ -17,14 +17,7 @@ public class Main {
 		Objeto test = new Objeto("test");
 
 		em.loggerTest();
-//		em.insertarObjeto(test);
-		
-		logger.trace("Texto");
-		logger.debug("Texto"); 
-		logger.info("Texto");
-		logger.warn("Texto");
-		logger.error("Texto");
-		logger.fatal("Texto");
+
 
 	}
 }

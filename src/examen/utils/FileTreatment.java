@@ -1,8 +1,10 @@
 package examen.utils;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -13,6 +15,7 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import es.curso.java.ddbb.ejercicios.biblioteca.entities.Usuario;
 import examen.entities.Objeto;
 
 
@@ -54,5 +57,22 @@ public class FileTreatment {
 		return listaObjetos;
 	}
 	
-	
+	public void exportarListado(List<Objeto> listado, String rutaArchivo) {
+		String cabecera = "ID;NOMBRE;APELLIDOS;FECHA\n";
+		try (BufferedWriter writer = new BufferedWriter(new FileWriter(rutaArchivo))) {
+			writer.write(cabecera);
+			for (Objeto objeto : listado) {
+
+				SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
+				String fechaFinal = formato.format(objeto.getFechaAlta());
+
+				StringBuilder registro = new StringBuilder(objeto.getId() + ";" + objeto.getNombre() + ";"
+						 + fechaFinal + "\n");
+				writer.write(registro.toString());
+			}
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }
