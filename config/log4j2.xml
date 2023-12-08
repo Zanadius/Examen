@@ -22,10 +22,10 @@
 		</RollingFile>
 	</Appenders>
 	<Loggers>
-		<Logger name="curso.java.jdbc" level="info" additivity="false">
+		<Logger name="examen.jdbc" level="info" additivity="false">
 			<AppenderRef ref="LogToConsole" />
 		</Logger>
-		<Logger name="curso.java.hibernate" level="info"
+		<Logger name="examen.hibernate" level="info"
 			additivity="false">
 			<AppenderRef ref="LogToConsole" />
 			 <AppenderRef ref="rollingFile"/>

@@ -24,6 +24,15 @@ public class Objeto {
 	public Objeto() {
 		super();
 	}
+	
+	
+	
+	public Objeto(String nombre) {
+		super();
+		this.nombre = nombre;
+	}
+
+
 
 	public Objeto(long id, String nombre) {
 		super();
@@ -49,7 +58,7 @@ public class Objeto {
 
 	@Override
 	public String toString() {
-		return "Objeto [iD : " + id + ", Nombre : " + nombre + "]";
+		return "Objeto -> iD : " + id + ", Nombre : " + nombre;
 	}
 	
 	
