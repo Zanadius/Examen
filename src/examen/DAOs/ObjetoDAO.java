@@ -20,9 +20,18 @@ public class ObjetoDAO {
 	public ObjetoDAO(String persitenceUnitName) {
 		em = JpaUtil.getEM(persitenceUnitName);
 	}
-
 	
-	public void insertarUsuario (Objeto objeto) {
+	public void loggerTest () {
+		logger.trace("Texto");
+		logger.debug("Texto"); 
+		logger.info("Texto");
+		logger.warn("Texto");
+		logger.error("Texto");
+		logger.fatal("Texto");
+
+	}
+	
+	public void insertarObjeto (Objeto objeto) {
 		 em.getTransaction().begin();
 		 try {
 			 em.persist(objeto);

@@ -13,7 +13,7 @@ import jakarta.persistence.Table;
 public class Objeto {
 
 	@Id
-	@SequenceGenerator(name="PRODUCTOGEN", sequenceName="PRODUCTO_GEN", initialValue=1, allocationSize=1)
+	@SequenceGenerator(name="OBJETOOGEN", sequenceName="OBJETO_GEN", initialValue=1, allocationSize=1)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="PRODUCTOGEN")
 	private long id;
 	@Column(length = 20) 
