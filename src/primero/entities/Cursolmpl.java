@@ -3,11 +3,10 @@ package primero.entities;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import examen.entities.Objeto;
 import primero.interfaces.Curso;
 
 public class Cursolmpl implements Curso{
-	private static final Logger logger = LogManager.getLogger(Objeto.class);
+	private static final Logger logger = LogManager.getLogger(Cursolmpl.class);
 	
 	private String nombre;
 	private long codigo;

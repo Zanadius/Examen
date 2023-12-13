@@ -8,12 +8,11 @@ import java.util.Set;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import examen.entities.Objeto;
 import examen.utils.Utilidades;
 import primero.entities.Master;
 
 public class MasterDAO {
-	private static final Logger logger = LogManager.getLogger(Objeto.class);
+	private static final Logger logger = LogManager.getLogger(MasterDAO.class);
 
 	/**
 	 * Crea un master

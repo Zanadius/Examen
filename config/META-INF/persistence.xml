@@ -3,8 +3,8 @@
     <persistence-unit name="hibernateMysql" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <!-- entidades o entities -->
-        <class>examen.entities.Objeto</class>
-        
+ 
+         <class>cuarto.Contrato</class>
         
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
@@ -21,8 +21,7 @@
    <persistence-unit name="hibernateOracle" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <!-- entidades o entities -->
-        <class>examen.entities.Objeto</class>
-        
+        <class>cuarto.Contrato</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>

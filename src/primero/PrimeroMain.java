@@ -6,13 +6,12 @@ import java.util.Map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import examen.entities.Objeto;
 import examen.utils.Utilidades;
 import primero.DAOs.MasterDAO;
 import primero.entities.Master;
 
 public class PrimeroMain {
-	private static final Logger logger = LogManager.getLogger(Objeto.class);
+	private static final Logger logger = LogManager.getLogger(PrimeroMain.class);
 	private MasterDAO m = new MasterDAO();
 	private Map<Long, Master> mapaM = new HashMap<Long, Master>();
 

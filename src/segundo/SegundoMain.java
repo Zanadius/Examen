@@ -4,23 +4,19 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
+
 import java.util.HashMap;
-import java.util.List;
+
 import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import examen.entities.Objeto;
-import primero.entities.Master;
+
 
 public class SegundoMain {
 	
-	private static final Logger logger = LogManager.getLogger(Objeto.class);
+	private static final Logger logger = LogManager.getLogger(SegundoMain.class);
 
 	public static void main(String[] args) {
 		
