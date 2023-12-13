@@ -22,6 +22,15 @@ public class Utilidades {
 		return reply;
 	}
 	
+	public static long pideDatoLong (String texto) {
+		int reply=0;
+		System.out.println(texto);
+		Scanner scan = new Scanner(System.in);
+		reply = scan.nextInt();
+		
+		return reply;
+	}
+	
 	public static int pintarMenu(String menu) {
 		
 		return pintarMenu(menu, "Introduce una opción", "\n");
