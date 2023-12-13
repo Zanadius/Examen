@@ -30,7 +30,7 @@ public class PrimeroMain {
 
 		do {
 			opcion = Utilidades.pintarMenu(
-					"1. Añadir Master.;2. Eliminar Master.;3. Mostrar Masters disponibles.;4. Salir.",
+					"1.Añadir Master.;2. Eliminar Master.;3. Mostrar Masters disponibles.;4. Salir.",
 					"Elija una opción", ";");
 			switch (opcion) {
 			// Añadir Master
