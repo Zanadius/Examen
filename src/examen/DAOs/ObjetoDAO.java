@@ -22,7 +22,7 @@ public class ObjetoDAO {
 	}
 	
 	public void loggerTest () {
-		logger.trace("Texto");
+		logger.trace("Texto1");
 		logger.debug("Texto"); 
 		logger.info("Texto");
 		logger.warn("Texto");
