@@ -23,7 +23,16 @@
 	</Appenders>
 	<Loggers>
 		<!-- Package Logger -->
-		<Logger name="examen" level="info" additivity="false">
+		<Logger name="primero" level="info" additivity="false">
+			<AppenderRef ref="LogToConsole" />
+		</Logger>
+		<Logger name="segundo" level="info" additivity="false">
+			<AppenderRef ref="LogToConsole" />
+		</Logger>
+		<Logger name="tercero" level="info" additivity="false">
+			<AppenderRef ref="LogToConsole" />
+		</Logger>
+		<Logger name="cuarto" level="info" additivity="false">
 			<AppenderRef ref="LogToConsole" />
 		</Logger>
 		<!-- Hibernate Logger -->
