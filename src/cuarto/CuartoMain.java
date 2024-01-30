@@ -1,5 +1,6 @@
 package cuarto;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -12,11 +13,34 @@ public class CuartoMain {
 	public static void main(String[] args) {
 
 		SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
-		String fechaFinal = formato.format("31-12-2023");
-
-		Contrato c1 = new Contrato("Cliente1", new Date(), new Date(), 1000);
-		Contrato c2 = new Contrato("Cliente2", new Date(), new Date(), 1000);
-		Contrato c3 = new Contrato("Cliente3", new Date(), new Date(), 1000);
+		Date fechaFinal = null; 
+		
+		try {
+			fechaFinal = formato.parse("31-12-2023");
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Contrato c1 = new Contrato("Cliente1", new Date(), fechaFinal, 1000);
+		
+		try {
+			fechaFinal = formato.parse("31-12-2024");
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Contrato c2 = new Contrato("Cliente2", new Date(), fechaFinal, 1000);
+		
+		try {
+			fechaFinal = formato.parse("31-12-2025");
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Contrato c3 = new Contrato("Cliente3", new Date(), fechaFinal, 1000);
 
 		ContratoDAO dao = new ContratoDAO("hibernateMysql");
 

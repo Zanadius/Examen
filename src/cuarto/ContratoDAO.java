@@ -45,9 +45,9 @@ public class ContratoDAO {
 	}
 	
 	public List<Contrato> sacarContratosBBDD() {
-		List <Contrato> contratos =em.createQuery("from Objeto", Contrato.class).getResultList();
+		List <Contrato> contratos =em.createQuery("from Contrato", Contrato.class).getResultList();
 		logger.info("Contratos encontrados en la base de datos:");
-		contratos.forEach(contrato -> logger.info(contratos));
+		contratos.forEach(contrato -> logger.info(contrato));
 		return contratos;
 	}
 	
@@ -62,7 +62,7 @@ public class ContratoDAO {
 		query.setParameter(1, name);
 		contratos = query.getResultList();
 		
-		contratos.forEach(contrato -> logger.info(contratos));
+		contratos.forEach(contrato -> logger.info(contrato));
 		
 		return contratos;
 	}
@@ -78,7 +78,7 @@ public class ContratoDAO {
 		query.setParameter(1, importe);
 		contratos = query.getResultList();
 		
-		contratos.forEach(contrato -> logger.info(contratos));
+		contratos.forEach(contrato -> logger.info(contrato));
 		
 		return contratos;
 	}
